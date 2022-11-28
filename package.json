@@ -1,0 +1,38 @@
+{
+	"name": "rudy-portfolio-v3-vite",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"@types/jest": "^27.5.2",
+		"@types/node": "^16.18.3",
+		"@types/react": "^18.0.25",
+		"@types/react-dom": "^18.0.9",
+		"@use-gesture/react": "^10.2.22",
+		"d3-ease": "^3.0.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-feather": "^2.0.10",
+		"react-scripts": "5.0.1",
+		"react-spring": "^9.5.5",
+		"swiper": "^8.4.5",
+		"typescript": "^4.9.3",
+		"web-vitals": "^2.1.4"
+	},
+	"devDependencies": {
+		"@types/d3-ease": "^3.0.0",
+		"@vitejs/plugin-react": "^2.2.0",
+		"autoprefixer": "^10.4.13",
+		"postcss": "^8.4.19",
+		"tailwindcss": "^3.2.4",
+		"vite": "^3.2.3"
+	}
+}
