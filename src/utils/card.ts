@@ -115,10 +115,10 @@ export const cards = [
 	},
 	{
 		id: 'c8',
-		title: 'Youtube 筆記外掛元件',
+		title: 'Youtube 筆記擴充元件',
 		category: '實用工具',
 		description:
-			'使用 React 搭配 Bootstrap 開發 Chrome 外掛元件，可在 Youtube 時間軸上使用文字筆記',
+			'使用 React 搭配 Bootstrap 開發 Chrome 擴充元件，可在 Youtube 時間軸上使用文字筆記',
 		tools: ['React', 'Bootstrap'],
 		image:
 			'https://res.cloudinary.com/dz50afcaa/image/upload/v1669608623/rudy-portfolio-v3/image/youtube-note-extension/youtube-note-extension1_nsufhb.webp',

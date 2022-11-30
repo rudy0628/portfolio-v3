@@ -3,12 +3,14 @@ import { useSpring, animated } from '@react-spring/web';
 import { zh_tw } from '../utils/lang';
 import { ChevronsDown } from 'react-feather';
 import * as easing from 'd3-ease';
+import { useTranslation } from 'react-i18next';
 
 interface IProps {
 	page: number;
 }
 
 const ScrollIndicatorD = ({ page }: IProps) => {
+	const { t } = useTranslation();
 	const colorSprings = useSpring({
 		from: { color: 'black', width: '90%', opacity: 1 },
 		to: {
@@ -35,7 +37,7 @@ const ScrollIndicatorD = ({ page }: IProps) => {
 			className="absolute z-[500] text-center font-semibold"
 		>
 			<p className="flex flex-col items-center">
-				{zh_tw.pageTitles[page + 1]}
+				{t(`scrollIndex.${zh_tw.pageTitles[page + 1]}`)}
 				<ChevronsDown />
 			</p>
 		</animated.div>
@@ -43,6 +45,7 @@ const ScrollIndicatorD = ({ page }: IProps) => {
 };
 
 const ScrollIndicatorM = ({ page }: IProps) => {
+	const { t } = useTranslation();
 	const colorSprings = useSpring({
 		from: { color: 'black', opacity: 1 },
 		to: {
@@ -68,7 +71,7 @@ const ScrollIndicatorM = ({ page }: IProps) => {
 			className="absolute left-0 z-[500] text-center font-semibold w-full"
 		>
 			<p className="flex flex-col items-center">
-				{zh_tw.pageTitles[page + 1]}
+				{t(`scrollIndex.${zh_tw.pageTitles[page + 1]}`)}
 				<ChevronsDown />
 			</p>
 		</animated.div>

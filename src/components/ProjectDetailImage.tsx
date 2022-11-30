@@ -12,6 +12,8 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectCube, Pagination } from 'swiper';
 
+import { useTranslation } from 'react-i18next';
+
 interface IProps {
 	watchingProjectOpened: boolean;
 	detailImages: string[];
@@ -23,6 +25,8 @@ const ProjectDetailImage = ({
 	detailImages,
 	detailImageAlt,
 }: IProps) => {
+	const { t } = useTranslation();
+
 	const [showAlertText, setShowAlertText] = useState<boolean>(true);
 	const alertTextSpring = useSpring({
 		from: {
@@ -70,7 +74,7 @@ const ProjectDetailImage = ({
 					className="absolute z-[100] top-[50%] left-[50%] text-sm text-zinc-500"
 					style={{ ...alertTextSpring }}
 				>
-					左右滑動查看更多圖片
+					{t('utils.左右滑動查看更多圖片')}
 				</animated.p>
 			)}
 		</Swiper>

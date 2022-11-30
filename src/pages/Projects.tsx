@@ -7,6 +7,7 @@ import {
 	ProjectDetailM,
 } from '../components';
 import { IProject } from '../type';
+import { useTranslation } from 'react-i18next';
 
 interface IProps {
 	page: number;
@@ -15,20 +16,20 @@ interface IProps {
 const pageCode = 3;
 
 const ProjectsD = ({ page }: IProps) => {
+	const { t } = useTranslation();
+
 	const [watchingProject, setWatchProject] = useState<IProject | undefined>(
 		undefined
 	);
 	const [watchingProjectOpened, setWatchingProjectOpened] =
 		useState<boolean>(false);
 	const [projectWindowZIndex, setProjectWindowZIndex] = useState<number>(-1);
-	const [image, setImage] = useState<number>(0);
 
 	const toggleWatchProject = (project: IProject | undefined) => {
 		if (project) {
 			setWatchProject(project);
 			setWatchingProjectOpened(true);
 			setProjectWindowZIndex(50);
-			setImage(0);
 		} else {
 			setWatchProject(undefined);
 			setWatchingProjectOpened(false);
@@ -55,22 +56,24 @@ const ProjectsD = ({ page }: IProps) => {
 						delay={page === pageCode ? 600 : 450}
 						className="mb-4"
 					>
-						<h1 className="highlight1 text-3xl font-extrabold">開發作品</h1>
+						<h1 className="highlight1 text-3xl font-extrabold">
+							{t('projects.開發作品')}
+						</h1>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
 						delay={page === pageCode ? 750 : 300}
 						className="mb-2"
 					>
-						<p>以下是我最近開發的幾個專案</p>
-						<p>點擊兩下後可以查看更詳細的內容</p>
+						<p>{t('projects.以下是我最近開發的幾個專案')}</p>
+						<p>{t('projects.點擊兩下後可以查看更詳細的內容')}</p>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
 						delay={page === pageCode ? 900 : 150}
 					>
 						<p className="text-zinc-600">
-							想看更多？歡迎查看我的{' '}
+							{t('projects.想看更多？歡迎查看我的')}{' '}
 							<a
 								href="https://github.com/rudy0628"
 								className="text-[#90caf9]"
@@ -78,7 +81,7 @@ const ProjectsD = ({ page }: IProps) => {
 							>
 								GitHub
 							</a>{' '}
-							帳號
+							{t('projects.帳號')}
 						</p>
 					</Rasing>
 				</div>
@@ -108,20 +111,19 @@ const ProjectsD = ({ page }: IProps) => {
 };
 
 const ProjectsM = ({ page }: IProps) => {
+	const { t } = useTranslation();
 	const [watchingProject, setWatchProject] = useState<IProject | undefined>(
 		undefined
 	);
 	const [watchingProjectOpened, setWatchingProjectOpened] =
 		useState<boolean>(false);
 	const [projectWindowZIndex, setProjectWindowZIndex] = useState<number>(-1);
-	const [image, setImage] = useState<number>(0);
 
 	const toggleWatchProject = (project: IProject | undefined) => {
 		if (project) {
 			setWatchProject(project);
 			setWatchingProjectOpened(true);
 			setProjectWindowZIndex(50);
-			setImage(0);
 		} else {
 			setWatchProject(undefined);
 			setWatchingProjectOpened(false);
@@ -147,22 +149,24 @@ const ProjectsM = ({ page }: IProps) => {
 					delay={page === pageCode ? 600 : 450}
 					className="mb-4"
 				>
-					<h1 className="highlight1 text-3xl font-extrabold">開發作品</h1>
+					<h1 className="highlight1 text-3xl font-extrabold">
+						{t('projects.開發作品')}
+					</h1>
 				</Rasing>
 				<Rasing
 					active={page === pageCode}
 					delay={page === pageCode ? 750 : 300}
 					className="mb-2"
 				>
-					<p>以下是我最近開發的幾個專案</p>
-					<p>點擊兩下後可以查看更詳細的內容</p>
+					<p>{t('projects.以下是我最近開發的幾個專案')}</p>
+					<p>{t('projects.點擊兩下後可以查看更詳細的內容')}</p>
 				</Rasing>
 				<Rasing
 					active={page === pageCode}
 					delay={page === pageCode ? 900 : 150}
 				>
 					<p className="text-zinc-600">
-						想看更多？歡迎查看我的{' '}
+						{t('projects.想看更多？歡迎查看我的')}{' '}
 						<a
 							href="https://github.com/rudy0628"
 							className="text-[#90caf9]"
@@ -170,7 +174,7 @@ const ProjectsM = ({ page }: IProps) => {
 						>
 							GitHub
 						</a>{' '}
-						帳號
+						{t('projects.帳號')}
 					</p>
 				</Rasing>
 			</div>

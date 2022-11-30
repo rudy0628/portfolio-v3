@@ -4,6 +4,7 @@ import { animated, useSpring } from '@react-spring/web';
 import { ArrowLeft, GitHub, Globe } from 'react-feather';
 import { ProjectDetailImage } from './';
 import { IProject } from '../type';
+import { useTranslation } from 'react-i18next';
 import Rasing from './Rasing';
 
 interface IProps {
@@ -19,6 +20,8 @@ const ProjectDetailD = ({
 	projectWindowZIndex,
 	toggleWatchProject,
 }: IProps) => {
+	const { t } = useTranslation();
+
 	const projectDetailSpring = useSpring({
 		from: {
 			opacity: 0,
@@ -49,7 +52,7 @@ const ProjectDetailD = ({
 							className="mb-4"
 						>
 							<h3 className="font-extrabold text-zinc-700">
-								{watchingProject?.category}
+								{t(`projectDetail.${watchingProject?.category}`)}
 							</h3>
 						</Rasing>
 						<Rasing
@@ -58,7 +61,7 @@ const ProjectDetailD = ({
 							className="mb-2"
 						>
 							<h1 className="highlight1 font-extrabold text-3xl">
-								{watchingProject?.title}
+								{t(`projectDetail.${watchingProject?.title}`)}
 							</h1>
 						</Rasing>
 						<Rasing
@@ -66,7 +69,7 @@ const ProjectDetailD = ({
 							delay={watchingProjectOpened ? 300 : 450}
 							className="mb-4"
 						>
-							<p>{watchingProject?.description}</p>
+							<p>{t(`projectDetail.${watchingProject?.description}`)}</p>
 						</Rasing>
 						<Rasing
 							active={watchingProjectOpened}
@@ -118,6 +121,8 @@ const ProjectDetailM = ({
 	projectWindowZIndex,
 	toggleWatchProject,
 }: IProps) => {
+	const { t } = useTranslation();
+
 	const projectDetailSpring = useSpring({
 		from: {
 			opacity: 0,
@@ -148,7 +153,7 @@ const ProjectDetailM = ({
 							className="mb-4"
 						>
 							<h3 className="font-extrabold text-zinc-700">
-								{watchingProject?.category}
+								{t(`projectDetail.${watchingProject?.category}`)}
 							</h3>
 						</Rasing>
 						<Rasing
@@ -157,7 +162,7 @@ const ProjectDetailM = ({
 							className="mb-2"
 						>
 							<h1 className="highlight1 font-extrabold text-3xl">
-								{watchingProject?.title}
+								{t(`projectDetail.${watchingProject?.title}`)}
 							</h1>
 						</Rasing>
 						<Rasing
@@ -165,7 +170,7 @@ const ProjectDetailM = ({
 							delay={watchingProjectOpened ? 300 : 450}
 							className="mb-4"
 						>
-							<p>{watchingProject?.description}</p>
+							<p>{t(`projectDetail.${watchingProject?.description}`)}</p>
 						</Rasing>
 						<Rasing
 							active={watchingProjectOpened}

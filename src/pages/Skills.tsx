@@ -4,6 +4,7 @@ import { useSpring, animated } from '@react-spring/web';
 import { Rasing } from '../components';
 import { Check } from 'react-feather';
 import { zh_tw } from '../utils/lang';
+import { useTranslation } from 'react-i18next';
 
 interface IProps {
 	page: number;
@@ -12,6 +13,8 @@ interface IProps {
 const pageCode = 2;
 
 const SkillsD = ({ page }: IProps) => {
+	const { t } = useTranslation();
+
 	const mainBgSpring = useSpring({
 		from: {
 			r: '0%',
@@ -59,7 +62,9 @@ const SkillsD = ({ page }: IProps) => {
 						delay={page === pageCode ? 900 : 750}
 						className="mb-4"
 					>
-						<h1 className="highlight2 text-4xl font-extrabold">專長與技能</h1>
+						<h1 className="highlight2 text-4xl font-extrabold">
+							{t('skills.專長與技能')}
+						</h1>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
@@ -68,7 +73,7 @@ const SkillsD = ({ page }: IProps) => {
 						className="mb-6"
 					>
 						<p className="font-semibold">
-							以下是我目前參與過的專案所涵蓋的領域：
+							{t('skills.以下是我目前參與過的專案所涵蓋的領域：')}
 						</p>
 					</Rasing>
 					{zh_tw.fields.map((field: string, index: number) => (
@@ -81,7 +86,7 @@ const SkillsD = ({ page }: IProps) => {
 						>
 							<p className="font-semibold flex items-center gap-3">
 								<Check size={16} />
-								{field}
+								{t(`skills.${field}`)}
 							</p>
 						</Rasing>
 					))}
@@ -96,7 +101,7 @@ const SkillsD = ({ page }: IProps) => {
 							delay={page === pageCode ? 1050 : 450}
 							className="mb-4"
 						>
-							<h5 className="text-lg font-extrabold">前端技能</h5>
+							<h5 className="text-lg font-extrabold">{t('skills.前端技能')}</h5>
 						</Rasing>
 						{zh_tw.skills.frontend.map((skill: string, index: number) => (
 							<Rasing
@@ -121,7 +126,7 @@ const SkillsD = ({ page }: IProps) => {
 							delay={page === pageCode ? 1200 : 300}
 							className="mb-4"
 						>
-							<h5 className="text-lg font-extrabold">後端技能</h5>
+							<h5 className="text-lg font-extrabold">{t('skills.後端技能')}</h5>
 						</Rasing>
 						{zh_tw.skills.backend.map((skill: string, index: number) => (
 							<Rasing
@@ -146,7 +151,7 @@ const SkillsD = ({ page }: IProps) => {
 							delay={page === pageCode ? 1350 : 150}
 							className="mb-4"
 						>
-							<h5 className="text-lg font-extrabold">實用工具</h5>
+							<h5 className="text-lg font-extrabold">{t('skills.實用工具')}</h5>
 						</Rasing>
 						{zh_tw.skills.tools.map((skill: string, index: number) => (
 							<Rasing
@@ -170,6 +175,8 @@ const SkillsD = ({ page }: IProps) => {
 };
 
 const SkillsM = ({ page }: IProps) => {
+	const { t } = useTranslation();
+
 	const mainBgSpring = useSpring({
 		from: {
 			r: '0%',
@@ -226,7 +233,9 @@ const SkillsM = ({ page }: IProps) => {
 						delay={page === pageCode ? 900 : 750}
 						className="mb-4"
 					>
-						<h1 className="highlight2 text-4xl font-extrabold">專長與技能</h1>
+						<h1 className="highlight2 text-4xl font-extrabold">
+							{t('skills.專長與技能')}
+						</h1>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
@@ -234,7 +243,9 @@ const SkillsM = ({ page }: IProps) => {
 						delay={page === pageCode ? 1050 : 600}
 						className="mb-6"
 					>
-						<p className="font-semibold">以下是我目前擁有的專長與技術：</p>
+						<p className="font-semibold">
+							{t('skills.以下是我目前擁有的專長與技術：')}
+						</p>
 					</Rasing>
 				</div>
 				{/* down */}
@@ -250,7 +261,7 @@ const SkillsM = ({ page }: IProps) => {
 							delay={page === pageCode ? 1050 : 450}
 							className="mb-4"
 						>
-							<h5 className="text-lg font-extrabold">前端技能</h5>
+							<h5 className="text-lg font-extrabold">{t('skills.前端技能')}</h5>
 						</Rasing>
 						{zh_tw.skills.frontend.map((skill: string, index: number) => (
 							<Rasing
@@ -275,7 +286,7 @@ const SkillsM = ({ page }: IProps) => {
 							delay={page === pageCode ? 1200 : 300}
 							className="mb-4"
 						>
-							<h5 className="text-lg font-extrabold">後端技能</h5>
+							<h5 className="text-lg font-extrabold">{t('skills.後端技能')}</h5>
 						</Rasing>
 						{zh_tw.skills.backend.map((skill: string, index: number) => (
 							<Rasing
@@ -300,7 +311,7 @@ const SkillsM = ({ page }: IProps) => {
 							delay={page === pageCode ? 1350 : 150}
 							className="mb-4"
 						>
-							<h5 className="text-lg font-extrabold">實用工具</h5>
+							<h5 className="text-lg font-extrabold">{t('skills.實用工具')}</h5>
 						</Rasing>
 						{zh_tw.skills.tools.map((skill: string, index: number) => (
 							<Rasing

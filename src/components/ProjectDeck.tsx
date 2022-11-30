@@ -7,6 +7,7 @@ import {
 	useSpring,
 } from '@react-spring/web';
 import { useDrag } from '@use-gesture/react';
+import { useTranslation } from 'react-i18next';
 import { cards } from '../utils/card';
 import { IProject } from '../type';
 
@@ -41,6 +42,8 @@ const ProjectDeckD = ({
 	toggleWatchProject,
 	page,
 }: IProps) => {
+	const { t } = useTranslation();
+
 	// The set flags all the cards that are flicked out
 	const [gone] = useState(() => new Set());
 
@@ -163,9 +166,9 @@ const ProjectDeckD = ({
 							/>
 							<div className="p-4">
 								<p className="text-sm text-zinc-700 mb-2">
-									{cards[i].category}
+									{t(`projectDetail.${cards[i].category}`)}
 								</p>
-								<p>{cards[i].title}</p>
+								<p>{t(`projectDetail.${cards[i].title}`)}</p>
 							</div>
 						</animated.div>
 					</animated.div>
@@ -181,6 +184,8 @@ const ProjectDeckM = ({
 	toggleWatchProject,
 	page,
 }: IProps) => {
+	const { t } = useTranslation();
+
 	// The set flags all the cards that are flicked out
 	const [gone] = useState(() => new Set());
 
@@ -303,9 +308,9 @@ const ProjectDeckM = ({
 							/>
 							<div className="p-4">
 								<p className="text-sm text-zinc-700 mb-2">
-									{cards[i].category}
+									{t(`projectDetail.${cards[i].category}`)}
 								</p>
-								<p>{cards[i].title}</p>
+								<p>{t(`projectDetail.${cards[i].title}`)}</p>
 							</div>
 						</animated.div>
 					</animated.div>

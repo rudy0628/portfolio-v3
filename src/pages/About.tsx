@@ -2,6 +2,7 @@ import React from 'react';
 import * as easing from 'd3-ease';
 import { useSpring, animated } from '@react-spring/web';
 import { Rasing } from '../components';
+import { useTranslation } from 'react-i18next';
 
 interface IProps {
 	page: number;
@@ -9,46 +10,51 @@ interface IProps {
 
 const pageCode = 1;
 
-const about = [
-	{
-		key: 0,
-		item: (
-			<h4 className="text-white text-[24px] leading-[48px] relative font-extrabold whitespace-nowrap">
-				來自於台北，台灣
-			</h4>
-		),
-	},
-	{
-		key: 1,
-		item: (
-			<div className="text-white text-[24px] leading-[48px] font-extrabold whitespace-nowrap">
-				<h4 className="inline relative">畢業於</h4>
-				<h4 className="highlight3 relative">國立高雄科技大學</h4>
-			</div>
-		),
-	},
-	{
-		key: 2,
-		item: (
-			<div className="text-white text-[24px] leading-[48px] font-extrabold whitespace-nowrap">
-				<h4 className="inline relative">主修</h4>
-				<h4 className="highlight3 relative">資訊管理</h4>
-			</div>
-		),
-	},
-	{
-		key: 3,
-		item: (
-			<div className="text-white text-[24px] leading-[48px] font-extrabold whitespace-nowrap">
-				<h4 className="inline relative">一年半的</h4>
-				<h4 className="highlight3 relative">網頁開發</h4>
-				<h4 className="inline relative">經驗</h4>
-			</div>
-		),
-	},
-];
+const i18nAbout = (t: any) => {
+	return [
+		{
+			key: 0,
+			item: (
+				<h4 className="text-white text-[24px] leading-[48px] relative font-extrabold whitespace-nowrap">
+					{t('about.來自於台北，台灣')}
+				</h4>
+			),
+		},
+		{
+			key: 1,
+			item: (
+				<div className="text-white text-[24px] leading-[48px] font-extrabold whitespace-nowrap">
+					<h4 className="inline relative">{t('about.畢業於')}</h4>
+					<h4 className="highlight3 relative">{t('about.國立高雄科技大學')}</h4>
+				</div>
+			),
+		},
+		{
+			key: 2,
+			item: (
+				<div className="text-white text-[24px] leading-[48px] font-extrabold whitespace-nowrap">
+					<h4 className="inline relative">{t('about.主修')}</h4>
+					<h4 className="highlight3 relative">{t('about.資訊管理')}</h4>
+				</div>
+			),
+		},
+		{
+			key: 3,
+			item: (
+				<div className="text-white text-[24px] leading-[48px] font-extrabold whitespace-nowrap">
+					<h4 className="inline relative">{t('about.一年半的')}</h4>
+					<h4 className="highlight3 relative">{t('about.網頁開發')}</h4>
+					<h4 className="inline relative">{t('about.經驗')}</h4>
+				</div>
+			),
+		},
+	];
+};
 
 const AboutD = ({ page }: IProps) => {
+	const { t } = useTranslation();
+	const about = i18nAbout(t);
+
 	const backgroundSpring = useSpring({
 		from: {
 			width: '0%',
@@ -70,7 +76,7 @@ const AboutD = ({ page }: IProps) => {
 					delay={page === pageCode ? 750 : 300}
 				>
 					<h2 className="text-[24px] font-semibold leading-[60px] whitespace-nowrap">
-						關於我
+						{t('about.關於我')}
 					</h2>
 				</Rasing>
 				{about.map((aboutElement: any, index) => (
@@ -89,6 +95,9 @@ const AboutD = ({ page }: IProps) => {
 };
 
 const AboutM = ({ page }: IProps) => {
+	const { t } = useTranslation();
+	const about = i18nAbout(t);
+
 	const backgroundSpring = useSpring({
 		from: {
 			height: '0vh',
@@ -113,7 +122,7 @@ const AboutM = ({ page }: IProps) => {
 				className="mt-5"
 			>
 				<h2 className="text-[24px] font-semibold leading-[60px] whitespace-nowrap">
-					關於我
+					{t('about.關於我')}
 				</h2>
 			</Rasing>
 			{about.map((aboutElement: any, index) => (
