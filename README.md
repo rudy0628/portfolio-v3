@@ -17,3 +17,4 @@ This is my portfolio (https://blog.rudyyeh.dev/). Built with a bunch of cool tec
 - [ ] Loading Progress bar
 - [ ] Favicon
 - [ ] SEO
+- [ ] English version
