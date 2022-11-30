@@ -16,4 +16,5 @@ This is my portfolio (https://blog.rudyyeh.dev/). Built with a bunch of cool tec
 - [x] Initial loading page
 - [x] Favicon
 - [x] SEO
-- [ ] English version
+- [x] i18n
+- [ ] According user location to decide the website language
