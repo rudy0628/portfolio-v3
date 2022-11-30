@@ -105,7 +105,6 @@ const ProjectDetailD = ({
 				{/* image */}
 				<div className="flex-1 flex items-center relative">
 					<ProjectDetailImage
-						watchingProjectOpened={watchingProjectOpened}
 						detailImages={watchingProject?.detailImages!}
 						detailImageAlt={watchingProject?.title!}
 					/>
@@ -206,7 +205,6 @@ const ProjectDetailM = ({
 				{/* image */}
 				<div className="relative flex justify-center">
 					<ProjectDetailImage
-						watchingProjectOpened={watchingProjectOpened}
 						detailImages={watchingProject?.detailImages!}
 						detailImageAlt={watchingProject?.title!}
 					/>
