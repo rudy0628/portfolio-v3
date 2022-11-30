@@ -4,6 +4,7 @@ This is my portfolio (https://blog.rudyyeh.dev/). Built with a bunch of cool tec
 
 ![](https://skillicons.dev/icons?i=ts,react,tailwind,vite)
 
+- [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/) for styling
 - Animate using [React-spring](https://react-spring.dev/)
