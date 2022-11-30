@@ -6,6 +6,8 @@ const options = [
 	{ value: 'zh_tw', label: '繁' },
 	{ value: 'zh_cn', label: '简' },
 	{ value: 'en', label: 'Eng' },
+	{ value: 'ko', label: '한국어' },
+	{ value: 'ja', label: '日本語' },
 ];
 
 const TopNav = () => {
