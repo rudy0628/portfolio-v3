@@ -41,7 +41,9 @@ const ContactD = ({ page }: IProps) => {
 
 	return (
 		<animated.div
-			className="absolute top-[10vh] h-[80vh] overflow-hidden font-extrabold flex justify-center items-center"
+			className={`absolute top-[10vh] h-[80vh] overflow-hidden font-extrabold flex justify-center items-center ${
+				page === pageCode && 'z-[10]'
+			}`}
 			style={{ ...contactSpring }}
 		>
 			<div className="flex gap-8">
@@ -140,7 +142,9 @@ const ContactM = ({ page }: IProps) => {
 
 	return (
 		<animated.div
-			className="absolute top-[10vh] h-[80vh] overflow-hidden font-extrabold flex justify-center items-center"
+			className={`absolute top-[10vh] h-[80vh] overflow-hidden font-extrabold flex justify-center items-center ${
+				page === pageCode && 'z-[10]'
+			}`}
 			style={{ ...contactSpring }}
 		>
 			<div className="flex flex-col gap-8 text-center">

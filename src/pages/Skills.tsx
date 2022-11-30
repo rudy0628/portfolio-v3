@@ -42,7 +42,11 @@ const SkillsD = ({ page }: IProps) => {
 	});
 
 	return (
-		<div className="absolute top-[10vh] left-[5%] h-[80vh] w-[90%]">
+		<div
+			className={`absolute top-[10vh] left-[5%] h-[80vh] w-[90%] ${
+				page === pageCode && 'z-[10]'
+			}`}
+		>
 			{/* background */}
 			<svg className="float-left top-[10vh] left-[5%] h-[80vh] w-full">
 				<animated.circle cx="50%" cy="50%" r={mainBgSpring.r} fill="#b1dafb" />
@@ -213,7 +217,11 @@ const SkillsM = ({ page }: IProps) => {
 	});
 
 	return (
-		<div className="absolute top-[10vh] left-[5%] h-[80vh] w-[90%]">
+		<div
+			className={`absolute top-[10vh] left-[5%] h-[80vh] w-[90%] ${
+				page === pageCode && 'z-[10]'
+			}`}
+		>
 			{/* background */}
 			<svg className="float-left top-[10vh] left-[5%] h-[80vh] w-full">
 				<animated.circle cx="50%" cy="50%" r={mainBgSpring.r} fill="#b1dafb" />
