@@ -11,4 +11,8 @@ This is my portfolio (https://blog.rudyyeh.dev/). Built with a bunch of cool tec
 
 ## Todo List
 
-- [x] Basic Home Page
+- [ ] Google Analytics
+- [ ] Initial loading page
+- [ ] Loading Progress bar
+- [ ] Favicon
+- [ ] SEO
