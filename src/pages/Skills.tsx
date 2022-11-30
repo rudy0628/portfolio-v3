@@ -241,7 +241,7 @@ const SkillsM = ({ page }: IProps) => {
 						delay={page === pageCode ? 900 : 750}
 						className="mb-4"
 					>
-						<h1 className="highlight2 text-4xl font-extrabold">
+						<h1 className="highlight2 text-3xl font-extrabold">
 							{t('skills.專長與技能')}
 						</h1>
 					</Rasing>
