@@ -12,9 +12,9 @@ This is my portfolio (https://blog.rudyyeh.dev/). Built with a bunch of cool tec
 
 ## Todo List
 
-- [ ] Google Analytics
+- [x] Google Analytics
 - [ ] Initial loading page
 - [ ] Loading Progress bar
-- [ ] Favicon
+- [x] Favicon
 - [ ] SEO
 - [ ] English version
