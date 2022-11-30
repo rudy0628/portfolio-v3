@@ -47,7 +47,11 @@ const ProjectsD = ({ page }: IProps) => {
 	}, [page]);
 
 	return (
-		<div className="absolute top-[10vh] left-[5%] h-[80vh] overflow-hidden w-[80%] font-extrabold flex">
+		<div
+			className={`absolute top-[10vh] left-[5%] h-[80vh] overflow-hidden w-[80%] font-extrabold flex ${
+				page === pageCode && 'z-[10]'
+			}`}
+		>
 			{/* description */}
 			<div className="flex-1 flex justify-center items-center">
 				<div className="p-6">
@@ -141,7 +145,11 @@ const ProjectsM = ({ page }: IProps) => {
 	}, [page]);
 
 	return (
-		<div className="absolute top-[10vh] h-[85vh] overflow-hidden w-[90%] font-extrabold">
+		<div
+			className={`absolute top-[10vh] h-[85vh] overflow-hidden w-[90%] font-extrabold ${
+				page === pageCode && 'z-[10]'
+			}`}
+		>
 			{/* description */}
 			<div className="w-auto h-auto flex flex-col items-center">
 				<Rasing

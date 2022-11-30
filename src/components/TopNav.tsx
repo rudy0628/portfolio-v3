@@ -23,6 +23,7 @@ const TopNav = () => {
 				options={options}
 				defaultValue={options[0]}
 				onChange={(e: any) => i18n.changeLanguage(e.value)}
+				className="z-[500]"
 			/>
 		</div>
 	);

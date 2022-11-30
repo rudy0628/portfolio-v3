@@ -25,7 +25,11 @@ const WelcomeD = ({ page }: IProps) => {
 	});
 
 	return (
-		<div className="left-[5%] top-[10vh] w-[90%] h-[80vh] absolute overflow-hidden">
+		<div
+			className={`left-[5%] top-[10vh] w-[90%] h-[80vh] absolute overflow-hidden ${
+				(page === 0 || page === 1) && 'z-[10]'
+			}`}
+		>
 			<animated.div
 				style={{ ...welcomeSpring }}
 				className="flex flex-col items-center justify-center h-[80vh]"
@@ -74,7 +78,9 @@ const WelcomeM = ({ page }: IProps) => {
 	return (
 		<animated.div
 			style={{ ...welcomeSpring }}
-			className="absolute left-[50%] translate-x-[-50%] translate-y-[-50%]"
+			className={`absolute left-[50%] translate-x-[-50%] translate-y-[-50%] ${
+				(page === 0 || page === 1) && 'z-[10]'
+			}`}
 		>
 			<div>
 				<Rasing

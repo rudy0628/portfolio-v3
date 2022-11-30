@@ -69,7 +69,10 @@ const AboutD = ({ page }: IProps) => {
 	});
 
 	return (
-		<animated.div style={{ ...backgroundSpring }}>
+		<animated.div
+			style={{ ...backgroundSpring }}
+			className={`${page === pageCode && 'z-[10]'}`}
+		>
 			<div className="h-[80vh] bg-[#567995] flex flex-col justify-center px-[5%] z-[-2]">
 				<Rasing
 					active={page === pageCode}
@@ -114,7 +117,9 @@ const AboutM = ({ page }: IProps) => {
 	return (
 		<animated.div
 			style={{ ...backgroundSpring }}
-			className="fixed bottom-0 w-[90%] h-[80vh] bg-[#567995] z-[-2] flex flex-col items-center"
+			className={`fixed bottom-0 w-[90%] h-[80vh] bg-[#567995] flex flex-col items-center ${
+				page === pageCode && 'z-[10]'
+			}`}
 		>
 			<Rasing
 				active={page === pageCode}
