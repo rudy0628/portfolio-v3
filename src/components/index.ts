@@ -6,6 +6,7 @@ import { ProjectDeckD, ProjectDeckM } from './ProjectDeck';
 import { ProjectDetailD, ProjectDetailM } from './ProjectDetail';
 import ProjectDetailImage from './ProjectDetailImage';
 import LineIcon from './LineIcon';
+import InitialLoading from './InitialLoading';
 
 export {
 	TopNav,
@@ -19,4 +20,5 @@ export {
 	ProjectDetailM,
 	ProjectDetailImage,
 	LineIcon,
+	InitialLoading,
 };
