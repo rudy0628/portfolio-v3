@@ -2,6 +2,7 @@ import React from 'react';
 import * as easing from 'd3-ease';
 import { useSpring, animated } from '@react-spring/web';
 import { Rasing, SocialLinks } from '../components';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'react-feather';
 
 const pageCode = 4;
@@ -11,6 +12,8 @@ interface IProps {
 }
 
 const ContactD = ({ page }: IProps) => {
+	const { t } = useTranslation();
+
 	const contactSpring = useSpring({
 		from: {
 			width: '0%',
@@ -59,7 +62,9 @@ const ContactD = ({ page }: IProps) => {
 						delay={page === pageCode ? 600 : 150}
 						className="mb-8"
 					>
-						<h1 className="highlight1 text-3xl font-extrabold">聯絡方式</h1>
+						<h1 className="highlight1 text-3xl font-extrabold">
+							{t('contact.聯絡方式')}
+						</h1>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
@@ -67,11 +72,11 @@ const ContactD = ({ page }: IProps) => {
 						className="mb-4"
 					>
 						<p className="">
-							您可以{' '}
+							{t('contact.您可以')}{' '}
 							<a href="mailto:s3352250zz@gmail.com" className="text-[#90caf9]">
-								寫信
+								{t('contact.寫信')}
 							</a>{' '}
-							給我
+							{t('contact.給我')}
 						</p>
 					</Rasing>
 					<Rasing
@@ -79,7 +84,7 @@ const ContactD = ({ page }: IProps) => {
 						delay={page === pageCode ? 750 : 0}
 						className="mb-4"
 					>
-						<p className="text-sm text-zinc-600">或是</p>
+						<p className="text-sm text-zinc-600">{t('contact.或是')}</p>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
@@ -87,7 +92,7 @@ const ContactD = ({ page }: IProps) => {
 						className="mb-4"
 					>
 						<p className="flex gap-2 items-center">
-							點擊右方的社群媒體列 <ArrowRight size={16} />
+							{t('contact.點擊右方的社群媒體列')} <ArrowRight size={16} />
 						</p>
 					</Rasing>
 					<Rasing
@@ -95,7 +100,9 @@ const ContactD = ({ page }: IProps) => {
 						delay={page === pageCode ? 750 : 0}
 						className="mb-4"
 					>
-						<p className="highlight2">感謝您參觀我的個人頁面！</p>
+						<p className="highlight2">
+							{t('contact.感謝您參觀我的個人頁面！')}
+						</p>
 					</Rasing>
 				</div>
 			</div>
@@ -104,6 +111,8 @@ const ContactD = ({ page }: IProps) => {
 };
 
 const ContactM = ({ page }: IProps) => {
+	const { t } = useTranslation();
+
 	const contactSpring = useSpring({
 		from: {
 			width: '0%',
@@ -152,7 +161,9 @@ const ContactM = ({ page }: IProps) => {
 						delay={page === pageCode ? 600 : 150}
 						className="mb-8"
 					>
-						<h1 className="highlight1 text-3xl font-extrabold">聯絡方式</h1>
+						<h1 className="highlight1 text-3xl font-extrabold">
+							{t('contact.聯絡方式')}
+						</h1>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
@@ -160,11 +171,11 @@ const ContactM = ({ page }: IProps) => {
 						className="mb-4"
 					>
 						<p className="">
-							您可以{' '}
+							{t('contact.您可以')}{' '}
 							<a href="mailto:s3352250zz@gmail.com" className="text-[#90caf9]">
-								寫信
+								{t('contact.寫信')}
 							</a>{' '}
-							給我
+							{t('contact.給我')}
 						</p>
 					</Rasing>
 					<Rasing
@@ -172,7 +183,7 @@ const ContactM = ({ page }: IProps) => {
 						delay={page === pageCode ? 750 : 0}
 						className="mb-4"
 					>
-						<p className="text-sm text-zinc-600">或是</p>
+						<p className="text-sm text-zinc-600">{t('contact.或是')}</p>
 					</Rasing>
 					<Rasing
 						active={page === pageCode}
@@ -186,7 +197,9 @@ const ContactM = ({ page }: IProps) => {
 						delay={page === pageCode ? 750 : 0}
 						className="mb-4"
 					>
-						<p className="highlight2">感謝您參觀我的個人頁面！</p>
+						<p className="highlight2">
+							{t('contact.感謝您參觀我的個人頁面！')}
+						</p>
 					</Rasing>
 				</div>
 			</div>

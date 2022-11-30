@@ -1,4 +1,14 @@
 import React from 'react';
+import i18n from 'i18next';
+import Select from 'react-select';
+
+const options = [
+	{ value: 'zh_tw', label: '繁' },
+	{ value: 'zh_cn', label: '简' },
+	{ value: 'en', label: 'Eng' },
+	{ value: 'ko', label: '한국어' },
+	{ value: 'ja', label: '日本語' },
+];
 
 const TopNav = () => {
 	return (
@@ -9,15 +19,11 @@ const TopNav = () => {
 			>
 				Rudy Yeh
 			</h5>
-			<div className="flex gap-8 items-center">
-				<p className="font-semibold text-lg cursor-pointer">繁</p>
-				<p
-					className="font-semibold text-lg cursor-pointer"
-					onClick={() => alert('Sorry, English version will be there soon!')}
-				>
-					Eng
-				</p>
-			</div>
+			<Select
+				options={options}
+				defaultValue={options[0]}
+				onChange={(e: any) => i18n.changeLanguage(e.value)}
+			/>
 		</div>
 	);
 };
