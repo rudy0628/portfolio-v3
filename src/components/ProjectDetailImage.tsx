@@ -40,7 +40,7 @@ const ProjectDetailImage = ({ detailImages, detailImageAlt }: IProps) => {
 				</SwiperSlide>
 			))}
 
-			<p className="absolute z-[100] bottom-[-18%] left-[50%] text-sm text-zinc-500 translate-x-[-50%] translate-y-[-50%]">
+			<p className="absolute z-[100] bottom-[-40%]  md:bottom-[-28%] lg:bottom-[-18%] left-[50%] text-sm text-zinc-500 translate-x-[-50%] translate-y-[-50%] w-full text-center">
 				{t('utils.左右滑動查看更多圖片')}
 			</p>
 		</Swiper>
