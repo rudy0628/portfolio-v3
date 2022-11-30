@@ -60,7 +60,7 @@
 		"小型電商網站，可以上傳商品以及擁有購物車系統。使用 Express 實現RESTful API 以及使用 EJS 作為 HTML 樣板": "A small e-commerce website that can upload products and has a shopping cart system. Implement RESTful API with Express and use EJS as HTML boilerplate",
 		"TodoList map": "TodoList map",
 		"傳統 Todo list，結合 Leaflet 開源地圖，以及 Open Weather 顯示天氣，使用 Parcel 打包": "Traditional Todo list, combined with Leaflet open source map, and Open Weather to display the weather, packaged with Parcel",
-		"台灣即時天氣查詢": "Realtime Taiwan Weather Search",
+		"台灣即時天氣查詢": "Realtime Taiwan Weather",
 		"小型氣象查詢系統，可以查詢台灣各城市即時天氣資訊": "Small weather query system, you can query real-time weather information of various cities in Taiwan",
 		"Airtshop": "Airtshop",
 		"使用 React、Redux 開發機票訂購網站，擁有會員系統，可使用 Google 及 Facebook 登入": "Use React and Redux to develop an airline ticket ordering website with a membership system that can be logged in with Google and Facebook",
