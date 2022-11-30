@@ -49,7 +49,11 @@ const ContactD = ({ page }: IProps) => {
 			<div className="flex gap-8">
 				{/* image */}
 				<animated.div
-					style={{ ...imageSpring, width: '210px', height: '210px' }}
+					style={{
+						...imageSpring,
+						width: '210px',
+						height: '210px',
+					}}
 				>
 					<img
 						src="https://res.cloudinary.com/dz50afcaa/image/upload/v1669608622/rudy-portfolio-v3/image/rudy_nogiqt.jpg"
@@ -147,10 +151,14 @@ const ContactM = ({ page }: IProps) => {
 			}`}
 			style={{ ...contactSpring }}
 		>
-			<div className="flex flex-col gap-8 text-center">
+			<div className="flex flex-col items-center gap-8 text-center">
 				{/* image */}
 				<animated.div
-					style={{ ...imageSpring, width: '210px', height: '210px' }}
+					style={{
+						...imageSpring,
+						width: '210px',
+						height: '210px',
+					}}
 				>
 					<img
 						src="https://res.cloudinary.com/dz50afcaa/image/upload/v1669608622/rudy-portfolio-v3/image/rudy_nogiqt.jpg"
