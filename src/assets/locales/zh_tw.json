@@ -27,7 +27,7 @@
 	},
 	"skills": {
 		"專長與技能": "專長與技能",
-		"以下是我目前參與過的專案所涵蓋的領域：": "以下是我目前參與過的專案所涵蓋的領域",
+		"以下是我目前參與過的專案所涵蓋的領域：": "以下是我目前參與過的專案所涵蓋的領域：",
 		"以下是我目前擁有的專長與技術：": "以下是我目前擁有的專長與技術：",
 		"UI/UX 設計": "UI/UX 設計",
 		"手機雙平台 PWA 應用程式開發": "手機雙平台 PWA 應用程式開發",
@@ -57,7 +57,7 @@
 		"I-refri": "I-refri",
 		"社群媒體網站，可以在上面分享您的冰箱內容及查看他人冰箱內容": "社群媒體網站，可以在上面分享您的冰箱內容及查看他人冰箱內容",
 		"Shoppingsite": "Shoppingsite",
-		"小型電商網站，可以上傳商品以及擁有購物車系統。使用 Express 實現RESTful API 以及使用 EJS 作為 HTML 樣板": "小型電商網站，可以上傳商品以及擁有購物車系統。使用 Express 實現RESTful API 以及使用 EJS 作為 HTML 樣板",
+		"小型電商網站，可以上傳商品以及擁有購物車系統。使用 Express 實現RESTful API 以及使用 EJS 作為 HTML 樣板": "小型電商網站，可以上傳商品以及擁有購物車系統。使用 Express 實現 RESTful API 以及使用 EJS 作為 HTML 樣板",
 		"TodoList map": "TodoList map",
 		"傳統 Todo list，結合 Leaflet 開源地圖，以及 Open Weather 顯示天氣，使用 Parcel 打包": "傳統 Todo list，結合 Leaflet 開源地圖，以及 Open Weather 顯示天氣，使用 Parcel 打包",
 		"台灣即時天氣查詢": "台灣即時天氣查詢",

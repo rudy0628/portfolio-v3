@@ -19,6 +19,12 @@ const TopNav = () => {
 				</p>
 				<p
 					className="font-semibold text-lg cursor-pointer"
+					onClick={() => i18n.changeLanguage('zh_cn')}
+				>
+					簡
+				</p>
+				<p
+					className="font-semibold text-lg cursor-pointer"
 					onClick={() => i18n.changeLanguage('en')}
 				>
 					Eng
