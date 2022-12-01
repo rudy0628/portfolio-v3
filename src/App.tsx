@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import i18n from 'i18next';
 import {
 	TopNav,
 	SocialLinks,
@@ -45,6 +46,31 @@ function App() {
 
 		// locate the section of begin
 		locateSection(window.scrollY);
+
+		// According user location to decide the website language
+		navigator.geolocation.getCurrentPosition(position => {
+			fetch(
+				`https://maps.googleapis.com/maps/api/geocode/json?latlng=${
+					position.coords.latitude
+				},${position.coords.longitude}&key=${
+					import.meta.env.VITE_GOOGLE_MAPS_API
+				}`,
+				{
+					method: 'GET',
+				}
+			)
+				.then(response => {
+					return response.json();
+				})
+				.then(data => {
+					const resultsLen = data.results.length;
+					const countryCode =
+						data.results[
+							resultsLen - 1
+						].address_components[0].short_name.toLowerCase();
+					i18n.changeLanguage(countryCode);
+				});
+		});
 	}, []);
 
 	if (mobile) {
