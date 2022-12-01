@@ -17,5 +17,5 @@ This is my portfolio (https://blog.rudyyeh.dev/). Built with a bunch of cool tec
 - [x] Favicon
 - [x] SEO
 - [x] i18n
-- [ ] According user location to decide the website language
+- [x] According user location to decide the website language
 
